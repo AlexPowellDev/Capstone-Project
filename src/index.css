@@ -1,13 +1,293 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  color-scheme: dark light; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+body{
+
+}
+/*navigation*/
+.nav-bar{
+  display:flex;
+  background-color:white;
+  flex-flow:row wrap ;  
+  justify-content: center;
+  font-family: 'Markazi Text', serif;
+  font-size: 2rem;
+}
+
+.nav-container{
+list-style-type: none;
+margin-left: auto;
+align-self: center;
+}
+
+.nav-container li{
+  display: inline-block;
+}
+.nav-container a{
+  padding: 25px;
+}
+
+nav a:link{
+  text-decoration: none;
+}
+nav a:visited{
+  color:blueviolet;
+}
+nav a:hover{
+  border-radius: 20px;
+  color: black;
+}
+nav a:active{
+  color: blue;
+}
+
+#nav-logo{
+}
+/*header/CTA*/
+#parent{
+  position: relative;
+}
+header{
+  background-color: #495e57;
+  display: flex ;
+}
+.CTA{
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+header > div > h1{
+  color: #F4CE14;
+  font-family: 'Markazi Text', serif;
+  font-size: 53px;
+  font-weight:500 ;
+}
+
+header > div> h2{
+  color: white;
+  font-size: 48px;
+  font-family: 'Markazi Text', serif;
+  font-weight:500 ;
+}
+
+header > div > p{
+  color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 24px;
+  height:auto;
+  width: 19rem;
+}
+
+.header-button{
+  border-radius: 16px;
+  background-color:#F4CE14;
+  border: none;
+  font-family: 'Karla', sans-serif; ;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight:bold;
+  margin-top: 1rem;
+}
+
+#header-img{
+  position: absolute;
+  top: 50px;
+  left:60%;
+}
+#header-img >img{
+  width: 300px;
+  border-radius: 8px ;
+  height: 400px;
+  
+}
+/*main*/
+main{
+  display: flex;
+  flex-direction: column;
+  padding:2em;
+  padding-top: 10rem;
+}
+/*main header*/
+.main-header{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.main-header > div{
+  margin-left: auto;
+  align-self: center;
+}
+
+.main-button{
+  border-radius: 16px;
+  background-color:#F4CE14;
+  border: none;
+  font-family: 'Karla', sans-serif; ;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight:bold;
+}
+
+h2[class]{
+  color: black;
+  font-size: 50px;
+  font-family: 'Markazi Text', serif;
+  font-weight:500 ;
+}
+/*main section items*/
+#main-section{
+  display:flex ;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  align-self: center;
+  max-width: fit-content;
+}
+.item-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 350px;
+}
+article{
+  background-color:#FBDABB ;
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 0px 0px 16px 16px;
+  padding-bottom: 20px;
+}
+.item-title{
+  display: flex;
+  flex-direction: row wrap;
+  font-family: 'Markazi Text', serif;
+  font-size:24px;
+  flex-grow: 100%;
+  width: 100%;
+  padding-left: 20px;
+}
+.item-price-wrapper{
+  margin-left: auto;
+  color: #EE9972;
+  font-size: 21px;
+  font-weight:600;
+  padding-right: 20px;
+}
+
+.item-image-wrapper{
+  display: flex;
+}
+[class|="main-img"]{
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+}
+
+.item-description-wrapper{
+  display: flex;
+  flex-grow: 1;
+  color: #333333;
+  font-family: 'Karla', sans-serif;
+  width: 17rem;
+  padding: 20px;
+}
+.item-description-wrapper > p{
+  display: flex;
+  font-size: large;
+}
+
+.article-link{
+  padding-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  color: black;
+}
+/*footer*/
+footer{
+  display: flex;
+  flex-direction: row;
+  background-color: #495e57;
+  margin-top: 10rem;
+}
+
+.footer-logo-wrapper{
+  display:  flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+#footer-logo{
+  background-color: white;
+  padding: 20px;
+  width: 50%;
+}
+
+.footer-nav-wrapper{
+  display: flex;
+  flex-grow: 1; 
+}
+#nav-footer{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column{
+  flex:50%;
+  padding:10px;
+  font-family: 'Markazi Text', serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.footer-nav-button{
+  margin: 10px;
+  padding: 10px;
+}
+.footer-nav-button > a {
+  display: block;
+  color: white;
+  font-family: 'Markazi Text', serif;
+  font-size: 2rem;
+  border: solid;
+  text-decoration: none;
+}
+.copyright{
+  display: flex;
+  flex-wrap: wrap;
+  align-self:flex-end;
+  padding: 5px;
+  color: white;
+  font-family: 'Markazi Text', serif;
+  font-size: 21px;
 }
