@@ -1,4 +1,5 @@
 import '../styles/index.css'
+import { Link } from 'react-router-dom';
 import logo from '../../src/assets/LL-Logo.jpg';
 
 function Footer(){
@@ -10,14 +11,14 @@ return(
         <div className="footer-nav-wrapper">
                 <ul id="nav-footer">
                     <div className="footer-column">
-                        <li className ="footer-nav-button"><a href ="">Home</a></li>
-                        <li className ="footer-nav-button"><a href ="">About</a></li>
-                        <li className ="footer-nav-button"><a href ="">Menu</a></li>
+                        <li className ="footer-nav-button"><Link to="/">Home</Link></li>
+                        <li className ="footer-nav-button"><Link to ="/About">About</Link></li>
+                        <li className ="footer-nav-button"><Link to ="/Menu">Menu</Link></li>
                     </div>
                     <div className="footer-column">
-                        <li className ="footer-nav-button"><a href ="">Reservations</a></li>    
-                        <li className ="footer-nav-button"><a href ="">Order Online</a></li>
-                        <li className ="footer-nav-button"><a href ="">Login</a></li>
+                        <li className ="footer-nav-button"><Link to ="/Reservations">Reservations</Link></li>    
+                        <li className ="footer-nav-button"><Link to ="">Order Online</Link></li>
+                        <li className ="footer-nav-button"><Link to ="">Login</Link></li>
                     </div>
                 </ul>
         </div>

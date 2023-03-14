@@ -37,12 +37,13 @@ function BookingForm(props){
 
     return(
         <div className="form-wrapper">
-            <form className="form-container" onSubmit={handleSubmit}>
+            <form className="form-container" onSubmit={handleSubmit} aria-label="Reservation Form">
                 <label 
                 htmlFor="res-date" 
                 className="form-label">
                     <sup>*</sup>Choose Date: 
-                    <input 
+                    <input
+                    aria-label="Choose Date"
                     className="form-input"
                     type="date" required
                     id="res-date"
@@ -51,7 +52,8 @@ function BookingForm(props){
                     />
                 </label>
                 <label htmlFor="res-time" className="form-label"><sup>*</sup>Choose Time:
-                    <select 
+                    <select
+                    aria-label="Choose Time"
                     className="form-input" 
                     id="res-time"
                     required
@@ -62,11 +64,12 @@ function BookingForm(props){
                 <label htmlFor="res-guests" className="form-label">
                 <sup>*</sup>Number of Guests: 
                     <input 
+                    aria-label="Number of Guests"
                     className="form-input"
                     type="number" required
                     name="guests"  
-                    placeholder="1" 
-                    min="1" 
+                    placeholder="0" 
+                    min="0" 
                     max={"10"} 
                     id="res-guests"
                     value={values.guest}
@@ -74,7 +77,7 @@ function BookingForm(props){
                     />
                  </label>   
 
-                <label htmlFor="Occasion" className="form-label"><sup>*</sup>Occasion:
+                <label htmlFor="Occasion" className="form-label">Occasion:
                     <select 
                     className="form-input"
                     id="Occasion"
