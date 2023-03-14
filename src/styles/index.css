@@ -12,7 +12,9 @@ html{
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 body{
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 /*navigation*/
 .nav-bar{
@@ -37,18 +39,18 @@ align-self: center;
   padding: 25px;
 }
 
-nav a:link{
+.nav-container a:link{
   text-decoration: none;
 }
-nav a:visited{
-  color:blueviolet;
+.nav-container a:visited{
+  color:black;
 }
-nav a:hover{
-  border-radius: 20px;
+.nav-container a:hover{
+  box-shadow: 0 5px #495e57;
   color: black;
 }
-nav a:active{
-  color: blue;
+.nav-container a:active{
+  color: #F4CE14;
 }
 
 #nav-logo{
@@ -105,6 +107,21 @@ header > div > p{
   margin-top: 1rem;
 }
 
+.header-button a:link{
+  color: #333333;
+  text-decoration: none;
+}
+.header-button a:visited{
+  color:#333333;
+}
+.header-button a:hover{
+  box-shadow: 0 5px #495e57;
+  color: black;
+}
+.header-button a:active{
+  color: white;
+}
+
 #header-img{
   position: absolute;
   top: 50px;
@@ -147,6 +164,20 @@ main{
   text-decoration: none;
   font-size: 24px;
   font-weight:bold;
+}
+.main-button a:link{
+  color: #333333;
+  text-decoration: none;
+}
+.main-button a:visited{
+  color:#333333;
+}
+.main-button a:hover{
+  box-shadow: 0 5px #495e57;
+  color: black;
+}
+.main-button a:active{
+  color: white;
 }
 
 h2[class]{
@@ -234,7 +265,7 @@ footer{
   display: flex;
   flex-direction: row;
   background-color: #495e57;
-  margin-top: 10rem;
+  margin-top: auto;
 }
 
 .footer-logo-wrapper{
@@ -282,6 +313,21 @@ footer{
   border: solid;
   text-decoration: none;
 }
+
+
+.footer-nav-button > a:link{
+  text-decoration: none;
+}
+.footer-nav-button > a:visited{
+  color:white;
+}
+.footer-nav-button > a:hover{
+  color: black;
+}
+.footer-nav-button > a:active{
+  color: white;
+}
+
 .copyright{
   display: flex;
   flex-wrap: wrap;

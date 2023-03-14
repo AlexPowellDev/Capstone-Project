@@ -1,22 +1,23 @@
-import '../index.css'
+import '../styles/index.css'
 import salad from'../assets/greek salad.jpg'
 import bruchetta from '../assets/bruchetta.jpg'
 import dessert from '../assets/lemon dessert.jpg'
+import { Link } from 'react-router-dom'
 
 function Main(){
     return(
         <main>
             <div className="main-header">
                 <h2 className="main-h2">This week's specials!</h2>
-                <div>
-                    <button type="submit" className="main-button">Online Menu</button>
+                <div className="main-button">
+                    <Link to="/Order-Online">Online Menu</Link>
                 </div>
             </div>
             <section id="main-section">
                 {/*grid item*/}
                 <div className="item-wrapper">                    
                     <div className="item-image-wrapper">
-                        <img src={salad} alt="image of little lemon greek salad" className="main-img"/>
+                        <img src={salad} alt="Little lemon greek salad" className="main-img"/>
                     </div>
                     <article>
                         <div className="item-title">
@@ -28,7 +29,7 @@ function Main(){
                         <div className="item-description-wrapper">
                             <p>The famous greek salad of crispy lettuce, peppers, olives and our chicago style feta cheese. Garnished with crunchy garlic and rosemary croutons.</p>
                         </div>
-                        <a href="" className="article-link">Order a delivery</a>
+                        <Link to="/Order-Online" className="article-link">Order a delivery</Link>
                     </article>
                 </div>
                 {/*grid item*/}

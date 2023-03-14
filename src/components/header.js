@@ -1,7 +1,11 @@
-import '../index.css'
+import '../styles/index.css'
 import foodimg from '../assets/restauranfood.jpg'
+import { Link } from 'react-router-dom';
+
+
 
 function Header(){
+
     return(
 <div id="parent">
     <header>
@@ -9,8 +13,8 @@ function Header(){
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
             <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-            <div>
-                <button type="submit" className="header-button">Reserve a table</button>
+            <div className="header-button">
+                <Link to="/Reservations">Reserve a table</Link>
             </div>
         </div>
     </header>

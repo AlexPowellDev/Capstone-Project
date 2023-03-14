@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+html{
+  color-scheme: dark light; 
+}
+
+.form-wrapper{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  background-color:white;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: .3;
+  gap: 20px; 
+  padding: 2rem;
+  background-color:#495e57;
+}
+
+.form-label{
+  display:flex;
+  flex-wrap: wrap;
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: left;
+  border: solid;
+  align-items: center;
+  padding: 1rem;
+  background-color: #EDEFEE;
+}
+
+.form-input{
+  margin-left: auto;
+  font-size: 14px;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  border: 2px solid #dee1e2;
+  color: rgb(14, 14, 16);
+  background: #dee1e2;
+  width: 150px;
+  box-sizing: border-box;
+}
+.form-input:hover {
+    border-color: hsla(162,6.1%,67.84%,1);
+}
+.form-input:focus{
+    border-color:hsla(69.3,47.02%,29.61%,1) ;
+    background: #fff;
+}
+
+.comment-wrapper{
+  display: flex;
+  width: 50%;
+  align-self: baseline;
+  margin-bottom:  5rem;
+}
+
+#comments{
+  margin-right: auto;
+  flex-grow: 1;
+  height: 4rem;
+  resize: vertical;
+  font-size: 20px;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  text-align: left;
+}
+textarea:focus{
+  outline: 3px solid transparent;
+}
+
+.form-button{
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-duration: .5s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  width: 100%;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: #fff;
+  background-color: hsla(161.25,6.3%,49.8%,1);
+  height: 48px;
+}
+  .form-button:hover{
+      background-color:#f4cf14ad;
+  }

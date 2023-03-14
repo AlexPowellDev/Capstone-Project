@@ -1,4 +1,4 @@
-import '../index.css'
+import '../styles/index.css'
 import logo from '../../src/assets/LL-Logo.jpg';
 
 function Footer(){
