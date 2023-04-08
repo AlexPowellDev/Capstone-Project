@@ -1,11 +1,18 @@
 import Nav from "./nav"
 import Footer from "./footer"
+import ConfirmedBookingForm from "./confirmedBookingForm"
 
 function ConfirmedBooking(){
     return(
         <div>
             <Nav/>
-            <h1>Your reservation has been confirmed!</h1>
+            <header>
+                <div className="CTA">
+                    <h1>Book a table</h1>
+                    <h2>Little Lemon</h2>
+                </div>
+            </header>
+            <ConfirmedBookingForm/>
             <Footer/>
         </div>
     )

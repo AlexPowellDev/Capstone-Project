@@ -13,12 +13,10 @@ return(
                     <div className="footer-column">
                         <li className ="footer-nav-button"><Link to="/">Home</Link></li>
                         <li className ="footer-nav-button"><Link to ="/About">About</Link></li>
-                        <li className ="footer-nav-button"><Link to ="/Menu">Menu</Link></li>
                     </div>
                     <div className="footer-column">
                         <li className ="footer-nav-button"><Link to ="/Reservations">Reservations</Link></li>    
-                        <li className ="footer-nav-button"><Link to ="">Order Online</Link></li>
-                        <li className ="footer-nav-button"><Link to ="">Login</Link></li>
+                        <li className ="footer-nav-button"><Link to ="/Menu">Menu</Link></li>
                     </div>
                 </ul>
         </div>

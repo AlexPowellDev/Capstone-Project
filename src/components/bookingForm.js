@@ -1,7 +1,7 @@
-import confirmedBooking from "./confirmedBooking ";
+
 import { useState } from "react";
-import { Link } from 'react-router-dom';
 import '../styles/bookingForm.css'
+import seating from '../assets/pexels-lina-kivaka-12238177.jpg'
 
 
 function BookingForm(props){
@@ -12,7 +12,7 @@ function BookingForm(props){
 
     const clearForm = () =>{
         setValues({date:"",guest:"",occasion: "", comment: ""})
-    }
+    };
 
     const getIsFormValid = () => {
         return(
@@ -20,7 +20,7 @@ function BookingForm(props){
         values.guest,
         values.occasion != null
         )
-    }
+    };
 
     const saveFormValues = async () => {
         const response = JSON.stringify(values);
@@ -107,9 +107,12 @@ function BookingForm(props){
                         className="form-button"
                         disabled={getIsFormValid()}
                     >
-                        Confirm Your Reservation
+                        Reserve a Table
                     </button>
-        </form>
+            </form>
+        <div className='res-img-wrapper'>
+            <img id="res-img" src={seating} alt=''/> 
+        </div>
     </div>
     )
 };

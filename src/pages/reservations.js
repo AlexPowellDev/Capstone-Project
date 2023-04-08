@@ -1,4 +1,5 @@
 import '../styles/index.css'
+import '../styles/bookingForm.css'
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import BookingForm from '../components/bookingForm'
@@ -20,7 +21,7 @@ function Reservations(){
 //state is being changed
     useEffect(()=>{
         console.log("changed",updateTimes)        
-     },[updateTimes])
+     },[])
 
 
     const [state, dispatch] = useReducer(updateTimes, initializeTimes);
@@ -36,7 +37,7 @@ function Reservations(){
         <>
         <Nav/>
             <header>
-                <div>
+                <div className="CTA">
                     <h1>Book a table</h1>
                     <h2>Little Lemon</h2>
                 </div>
@@ -48,6 +49,7 @@ function Reservations(){
                 submitForm = {submitForm}
                 />}
             </div>
+
         {<Footer/>}
         </>
     )
