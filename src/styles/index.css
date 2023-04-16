@@ -55,6 +55,102 @@ align-self: center;
 #nav-logo{
   width: 100%;
 }
+
+.nav-toggle{
+  display: none ;
+}
+
+/*responsaive navbar*/
+@media (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    z-index: 9999;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  .nav-container.expanded {
+    display:flex;
+    background-color:white;
+    flex-flow:row wrap ;  
+    justify-content: center;
+    font-family: 'Markazi Text', serif;
+    font-size: 2rem;
+  }
+
+  .nav-container.expanded li  {
+    border-top: #333333 solid;
+    text-align: center;
+    padding-bottom: .5rem;
+  }
+
+  #nav-logo{
+    width: 70%;
+  }
+  
+/*hamburger icon /  animation*/
+
+.nav-toggle{
+  display: block;
+  background: transparent;
+  border-radius: .5rem;
+  border: 5px solid var(--button-color,#495e57);
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+.hamburger{
+  width: 2rem;
+  aspect-ratio: 1;
+  fill: var(--button-color);
+  --button-color:#495e57
+}
+
+.hamburger .line {
+  transition: 
+    y 300ms ease-in 300ms,
+    rotate 300ms ease-in,
+    opacity 0ms 300ms;
+    ;
+    transform-origin: center;
+}
+
+.hamburger[data-expanded = "true"] .line {
+  transition: 
+    y 300ms ease-in,
+    rotate 300ms ease-in 300ms,
+    opacity 0ms 300ms;
+}
+
+.hamburger[data-expanded = "true"] :is(.top, .bottom){
+  y: 45;
+}
+
+.hamburger[data-expanded = "true"] .top{
+  rotate: 45deg;
+}
+
+.hamburger[data-expanded = "true"] .middle{
+  opacity: 0;
+}
+
+.hamburger[data-expanded = "true"] .bottom{
+  rotate: -45deg;
+}
+
+}
+
+
 /*header/CTA*/
 #parent{
   position: relative;
