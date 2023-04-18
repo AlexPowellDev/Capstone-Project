@@ -40,6 +40,7 @@ align-self: center;
 
 .nav-container a:link{
   text-decoration: none;
+  color:black;
 }
 .nav-container a:visited{
   color:black;
@@ -349,6 +350,7 @@ article{
 }
 .item-title{
   display: flex;
+  color: #333333;
   flex-direction: row wrap;
   font-family: 'Markazi Text', serif;
   font-size:24px;
